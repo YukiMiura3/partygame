@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ゲーム検索</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/search.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 ゲーム検索</h1>
+
+    <!-- 検索フォームの下あたりに追加 -->
+    <div style="margin-top:14px">
+      <a href="add_game.html" class="btn">＋ ゲームを登録する</a>
+    </div>
+  
+
+    <form id="searchForm">
+      <label>人数：</label>
+      <select name="people">
+        <option value="">指定なし</option>
+        <option value="2-3">2〜3人</option>
+        <option value="4-6">4〜6人</option>
+      </select>
+
+      <label>時間：</label>
+      <select name="time">
+        <option value="">指定なし</option>
+        <option value="5">5分以内</option>
+        <option value="10">10分以内</option>
+      </select>
+
+      <label>ジャンル：</label>
+      <select name="genre">
+        <option value="">指定なし</option>
+        <option value="party">パーティー</option>
+        <option value="心理">心理</option>
+      </select>
+
+      <button type="submit">検索</button>
+    </form>
+
+    <button onclick="location.href='index.html'">← 戻る</button>
+  </div>
+</body>
+</html>
