@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ゲーム検索</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/search.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🔍 ゲーム検索</h1>
+
+    <div style="margin-top:14px">
+      <a href="add_game.html" class="btn">＋ ゲームを登録する</a>
+    </div>
+
+    <form id="searchForm">
+
+      <!-- 🔹 キーワード検索 -->
+      <label>キーワード検索（ゲーム名）</label>
+      <input type="text" name="keyword" placeholder="例：ワードウルフ">
+
+      <!-- 🔹 人数 -->
+      <label>人数</label>
+      <select name="players">
+        <option value="">指定なし</option>
+        <option value="2人">2人</option>
+        <option value="3～5人">3～5人</option>
+        <option value="6～9人">6～9人</option>
+        <option value="10人以上">10人以上</option>
+      </select>
+
+      <!-- 🔹 時間 -->
+      <label>時間</label>
+      <select name="time">
+        <option value="">指定なし</option>
+        <option value="3分以内">3分以内</option>
+        <option value="5分以内">5分以内</option>
+        <option value="10分以内">10分以内</option>
+        <option value="15分以内">15分以内</option>
+        <option value="15分以上">15分以上</option>
+      </select>
+
+      <!-- 🔹 ジャンル -->
+      <label>ジャンル</label>
+      <select name="genre">
+        <option value="">指定なし</option>
+        <option value="パーティー">パーティー</option>
+        <option value="トーク">トーク</option>
+        <option value="心理">心理</option>
+        <option value="クイズ">クイズ</option>
+        <option value="自己紹介">自己紹介</option>
+      </select>
+
+      <button type="submit" class="btn">検索</button>
+    </form>
+
+    <button onclick="location.href='index.html'" class="btn">← 戻る</button>
+  </div>
+</body>
+
+</html>

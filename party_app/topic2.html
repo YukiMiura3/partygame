@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>話題ルーレット</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/topic2.js" defer></script>
+</head>
+
+<body class="topic-page">
+
+    <div class="container fade-in">
+        <h1>💬 話題ルーレット</h1>
+
+        <!-- 話題表示 -->
+        <div id="topic-box" class="topic-box">
+            ここに話題が出ます
+        </div>
+
+        <button id="topic-btn" class="btn gradient">回す🎡</button>
+        <button class="btn" onclick="location.href='index.html'">← トップへ</button>
+
+        <hr style="margin:28px 0;opacity:.4;">
+
+        <h2 style="margin:0 0 8px;">自分の話題を追加</h2>
+
+        <form id="topicAddForm" class="game-form">
+
+            <!-- カテゴリー選択 -->
+            <select id="categorySelect">
+                <option value="" disabled selected>ジャンルを選択</option>
+                <option>恋愛・人間関係</option>
+                <option>自己紹介・価値観系</option>
+                <option>日常・生活習慣</option>
+                <option>生活・ライフスタイル</option>
+                <option>仕事・勉強・工夫</option>
+                <option>趣味・エンタメ</option>
+                <option>食べ物・料理</option>
+                <option>子ども時代・過去エピソード</option>
+                <option>旅行・おでかけ</option>
+                <option>おもしろ発想</option>
+                <option>ガジェット・デジタル</option>
+            </select>
+
+            <!-- テーマ入力 -->
+            <input id="topicInput" type="text" placeholder="例）今週のハイライトは？">
+
+            <button class="btn" type="submit">＋ 追加</button>
+            <button class="btn" type="button" id="topicClear">🗑 すべて削除</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

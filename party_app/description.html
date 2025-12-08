@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>スライド表示</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/description.js" defer></script>
+
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .slide-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ページネーション */
+        .pagination {
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 14px;
+            width: 14px;
+            margin: 0 6px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background-color: #000;
+        }
+
+        /* 左右の矢印ボタン */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #333;
+            padding: 10px;
+        }
+
+        .arrow.left {
+            left: -50px;
+        }
+
+        .arrow.right {
+            right: -50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slide-container">
+        <span class="arrow left" id="prevBtn">&#9664;</span>
+        <img id="slideImage" class="slide-image" src="">
+        <span class="arrow right" id="nextBtn">&#9654;</span>
+    </div>
+
+    <div class="pagination" id="dots"></div>
+
+</body>
+
+</html>
