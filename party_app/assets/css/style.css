@@ -237,3 +237,55 @@ h1 {
 .btn-back:hover {
   background: #bbb;
 }
+
+/* ===========================
+   共通：アイコン選択UI
+=========================== */
+.icon-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.icon-item {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.icon-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.icon-item span {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  color: #555;
+}
+
+/* ホバー */
+.icon-item:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* 選択中 */
+.icon-item.active {
+  background: linear-gradient(135deg, #42a5f5, #ab47bc);
+}
+
+.icon-item.active span {
+  color: #fff;
+}

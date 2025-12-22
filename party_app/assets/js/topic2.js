@@ -39,6 +39,7 @@ document.getElementById("topicAddForm").addEventListener("submit", async (e) => 
     }
 });
 
+/*
 // 全削除
 document.getElementById("topicClear").addEventListener("click", async () => {
     if (!confirm("本当に全て削除しますか？")) return;
@@ -50,3 +51,4 @@ document.getElementById("topicClear").addEventListener("click", async () => {
         alert("削除しました");
     }
 });
+*/

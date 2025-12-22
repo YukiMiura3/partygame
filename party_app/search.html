@@ -13,10 +13,14 @@
     <h1>🔍 ゲーム検索</h1>
 
     <div style="margin-top:14px">
+      <!-- ゲーム追加に関してはスライドの関係で検討中 -->
+      <!--
       <a href="add_game.html" class="btn">＋ ゲームを登録する</a>
+      -->
+
     </div>
 
-    <form id="searchForm">
+    <form id="searchForm" class="search-card">
 
       <!-- 🔹 キーワード検索 -->
       <label>キーワード検索（ゲーム名）</label>
@@ -24,7 +28,7 @@
 
       <!-- 🔹 人数 -->
       <label>人数</label>
-      <select name="players">
+      <select name="players" id="playersSelect" hidden>
         <option value="">指定なし</option>
         <option value="2人">2人</option>
         <option value="3～5人">3～5人</option>
@@ -32,9 +36,28 @@
         <option value="10人以上">10人以上</option>
       </select>
 
+      <div class="icon-group" data-target="playersSelect">
+        <button type="button" class="icon-item" data-value="2人">
+          <img src="assets/images/icons/players_2.png">
+          <span>2人</span>
+        </button>
+        <button type="button" class="icon-item" data-value="3～5人">
+          <img src="assets/images/icons/players_3_5.png">
+          <span>3〜5人</span>
+        </button>
+        <button type="button" class="icon-item" data-value="6～9人">
+          <img src="assets/images/icons/players_6_9.png">
+          <span>6〜9人</span>
+        </button>
+        <button type="button" class="icon-item" data-value="10人以上">
+          <img src="assets/images/icons/players_10.png">
+          <span>10人+</span>
+        </button>
+      </div>
+
       <!-- 🔹 時間 -->
       <label>時間</label>
-      <select name="time">
+      <select name="time" id="timeSelect" hidden>
         <option value="">指定なし</option>
         <option value="3分以内">3分以内</option>
         <option value="5分以内">5分以内</option>
@@ -43,9 +66,28 @@
         <option value="15分以上">15分以上</option>
       </select>
 
+      <div class="icon-group" data-target="timeSelect">
+        <button type="button" class="icon-item" data-value="3分以内">
+          <img src="assets/images/icons/time_3.png">
+          <!-- <span>〜3分</span> -->
+        </button>
+        <button type="button" class="icon-item" data-value="5分以内">
+          <img src="assets/images/icons/time_5.png">
+          <span>〜5分</span>
+        </button>
+        <button type="button" class="icon-item" data-value="10分以内">
+          <img src="assets/images/icons/time_10.png">
+          <span>〜10分</span>
+        </button>
+        <button type="button" class="icon-item" data-value="15分以内">
+          <img src="assets/images/icons/time_15.png">
+          <span>～15分</span>
+        </button>
+      </div>
+
       <!-- 🔹 ジャンル -->
       <label>ジャンル</label>
-      <select name="genre">
+      <select name="genre" id="genreSelect" hidden>
         <option value="">指定なし</option>
         <option value="パーティー">パーティー</option>
         <option value="トーク">トーク</option>
@@ -53,6 +95,29 @@
         <option value="クイズ">クイズ</option>
         <option value="自己紹介">自己紹介</option>
       </select>
+
+      <div class="icon-group" data-target="genreSelect">
+        <button type="button" class="icon-item" data-value="パーティー">
+          <img src="assets/images/icons/genre_party.png">
+          <span>パーティー</span>
+        </button>
+        <button type="button" class="icon-item" data-value="トーク">
+          <img src="assets/images/icons/genre_talk.png">
+          <span>トーク</span>
+        </button>
+        <button type="button" class="icon-item" data-value="心理">
+          <img src="assets/images/icons/genre_psy.png">
+          <span>心理</span>
+        </button>
+        <button type="button" class="icon-item" data-value="クイズ">
+          <img src="assets/images/icons/genre_quiz.png">
+          <span>クイズ</span>
+        </button>
+        <button type="button" class="icon-item" data-value="自己紹介">
+          <img src="assets/images/icons/genre_intro.png">
+          <span>自己紹介</span>
+        </button>
+      </div>
 
       <button type="submit" class="btn">検索</button>
     </form>

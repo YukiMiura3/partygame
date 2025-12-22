@@ -1,8 +1,8 @@
 <?php
-$host = "192.168.12.71";
+$host = "localhost";
 $dbname = "icebreak";
-$user = "(ユーザー名)";
-$pass = "(パスワード)";
+$user = "appuser";
+$pass = "rtyu90pl@MySQL";
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", 
                 $user, $pass,
