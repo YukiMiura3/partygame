@@ -3,6 +3,7 @@ const id = params.get("id");
 
 // スライド画像を格納する変数
 let slides = [];
+let slideDir = "";
 let currentIndex = 0;
 
 // 初期化
@@ -10,6 +11,7 @@ fetch(`api/get_slides.php?id=${id}`)
     .then(res => res.json())
     .then(data => {
         slides = data.slides;
+        slideDir = data.slideDir;
         setupSlides();
     })
     .catch(err => console.error(err));
@@ -57,7 +59,7 @@ function setupSlides() {
 
 function updateSlide() {
     const img = document.getElementById("slideImage");
-    img.src = `assets/images/slides/word_wolf/${slides[currentIndex]}`;
+    img.src = `assets/images/slides/${slideDir}/${slides[currentIndex]}`;
 
     // ページネーション反映
     document.querySelectorAll(".dot").forEach((dot, i) => {
