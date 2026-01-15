@@ -27,7 +27,7 @@ const CATEGORIES = [
 
 // 針（ポインタ）が「上（12時）」にある前提。
 // もし針の位置を変えたらここだけ調整（例：右=0, 下=90, 左=180, 上=270 など）
-const POINTER_DEG = 270;
+const POINTER_DEG = 0;
 
 // 回転演出
 const EXTRA_SPINS = 6;     // 追加回転数
