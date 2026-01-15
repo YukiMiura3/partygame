@@ -22,9 +22,12 @@
 
     <form id="searchForm" class="search-card">
 
-      <!-- 🔹 キーワード検索 -->
-      <label>キーワード検索（ゲーム名）</label>
-      <input type="text" name="keyword" placeholder="例：ワードウルフ">
+      <!-- キーワード検索 -->
+      <div class="keyword-box">
+        <input type="text" name="keyword" placeholder="ゲーム名で検索（例：ワードウルフ）">
+        <button type="submit" class="keyword-btn">🔍</button>
+      </div>
+
 
       <!-- 🔹 人数 -->
       <label>人数</label>
@@ -119,11 +122,13 @@
         </button>
       </div>
 
-      <button type="submit" class="btn">検索</button>
+      <button type="submit" class="btn btn-search">検索</button>
     </form>
 
-    <button onclick="location.href='index.html'" class="btn">← 戻る</button>
-  </div>
+    <button onclick="location.href='index.html'" class="btn btn-back-simple">
+      ← 戻る
+    </button>
+
 </body>
 
 </html>
